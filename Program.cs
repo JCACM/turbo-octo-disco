@@ -11,6 +11,7 @@ namespace ConsoleApplication
             int number2 = 2;
             int number3 = number1 + number2;
             Console.WriteLine(number3);
+            Console.WriteLine("This is a change.");
         }
     }
 }
