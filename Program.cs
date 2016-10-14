@@ -34,7 +34,7 @@ namespace ConsoleApplication
                 this.adjClose = double.Parse(day[6]);
             }
         }
-        
+
         public static void Main(string[] args)
         {
             ProcessStockSymbols();
@@ -52,7 +52,8 @@ namespace ConsoleApplication
                 "AMZN",
                 "NKE",
                 "AAPL",
-                "GOOG"
+                "GOOG",
+                "MSFT"
             };
 
             var tasks = symbols.Select(symbol => ProcessStockSymbol(symbol)).ToList();
@@ -75,7 +76,7 @@ namespace ConsoleApplication
             {
                 Console.WriteLine($"Fetching {symbol}...");
                 string result = await content.ReadAsStringAsync();
-                
+
                 var lines = result.Split('\n').Skip(1);
 
                 var days = lines
